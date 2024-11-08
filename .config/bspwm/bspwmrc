@@ -4,29 +4,31 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 #### AUTOSTART ####
 sxhkd &
-picom &
-/usr/bin/emacs --daemon & ### Start Emacs Server
 $HOME/.config/polybar/launch.sh
+picom &
 
 ### Setting wallpaper ###
-feh --bg-scale ~/Pictures/Wallpapers/image16.png
+feh --bg-scale /home/peribot/Pictures/wallpapers/Gruvbox/minimalistic/gruvbox_spac.jpg
 
 ### 一 二 三 四 五 六 七 八 九 十
 bspc monitor -d "いち" に さん し ご ろく なな はち く じゅう
 
-bspc config border_width        3
-bspc config window_gap          12
-bspc config top_padding         24
+bspc config border_width        2
+bspc config window_gap          5
+bspc config top_padding         37
 
 bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config single_monocle	true
+bspc config borderless_monocle   false
+bspc config gapless_monocle      false
+bspc config focus_follows_pointer     true
 
 #fbf1c7
 #### BSPWM coloring ####
 bspc config normal_border_color           "#282828"
 bspc config active_border_color	      "#3c3836"
-bspc config focused_border_color	      "#fbf1c7"
+bspc config focused_border_color	      "#bdae93"
+### bspc config focused_border_color	      "#fbf1c7"
 bspc config presel_feedback_color	      "#5e81ac"
 bspc config urgent_border_color 	      "#dd2727"
 
@@ -36,4 +38,5 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Emacs state=tiled
+bspc rule -a telegram-desktop state=floating
+bspc rule -a /home/peribot/.local/share/spotify-launcher/install/usr/share/spotify/spotify state-floating
