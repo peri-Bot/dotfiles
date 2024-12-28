@@ -1,11 +1,21 @@
 # 👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻
 
-theme = gruvbox-material
+theme = GruvboxDark
 
-font-family = RobotoMono Nerd Font
-font-family-bold = RobotoMono Nerd Font Bd
-font-size = 8.8
+font-family = RobotoMono Nerd Font 
+font-size = 9
+
+selection-background = #ebdbb2 
+selection-foreground = #282828
 
 window-decoration = false
+
+bold-is-bright = true
+
+cursor-style-blink = false
+cursor-style = block
+
+
+shell-integration-features = no-cursor
 
 # 👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻👻
