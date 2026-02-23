@@ -1,0 +1,9 @@
+module qs.services
+singleton System System.qml
+singleton Audio Audio.qml
+singleton Network Network.qml
+singleton Brightness Brightness.qml
+singleton Bluetooth Bluetooth.qml
+singleton Notifications Notifications.qml
+singleton Battery Battery.qml
+singleton Media Media.qml
