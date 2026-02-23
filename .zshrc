@@ -1,5 +1,5 @@
 ### RANDOM COLOR SCRIPT ###
-colorscript random
+# colorscript random
 
 # Oh My Zsh configuration
 export ZSH="$HOME/.oh-my-zsh"
@@ -16,6 +16,8 @@ if command -v starship >/dev/null 2>&1; then
 fi
 
 
+export TERM=xterm-256color
+
 autoload bashcompinit && bashcompinit
 # Enable completion system
 autoload -U compinit && compinit -d ~/.cache/zcompdump
@@ -28,9 +30,14 @@ alias l='exa -F'
 alias fuck='thefuck'
 alias z='zoxide'
 alias vim='nvim'
+#git alias
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
 
 # Zsh options
-setopt autocd              # change directory just by typing its name
+
 setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
@@ -150,5 +157,18 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # eval "$(mcfly init zsh)"
 # eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey "^[[A" up-line-or-beginning-search 
+bindkey "^[[B" down-line-or-beginning-search 
+
+
+# opencode
+export PATH=/home/periBot/.opencode/bin:$PATH
